@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>check box</title>
+</head>
+<body>
+    <h2 style ="color: rgb(0, 17, 255);"> check box  </h2>
+<h3>  are u a developer </h3>
+ <input type ="checkbox" id="mycheckbox1" value="yes, iam " >
+ <label for="mycheckbox1">yes</label><br>
+
+<input type ="checkbox" id="mycheckbox2" value="no, iam not  " >
+ <label for="mycheckbox2">no</label><br><br>
+ 
+ <button onclick="checkCheckbox()">submit</button>
+ <br>
+ <h4 style="color:rgb(23, 102, 4)" id="result"></h4>
+ <h4 style="color:rgb(228, 34, 0)" id="error"></h4>
+    <script>
+         function checkCheckbox() {
+            var yes =document.getElementById("mycheckbox1");
+            var no =document.getElementById("mycheckbox2");
+            if(yes.checked == true && no.checked ==true){
+                return document.getElementById("error").innerHTML="please mark one "
+            }
+            else if(yes.checked ==true){
+                var y =document.getElementById("mycheckbox1").value;
+                return document.getElementById("result").innerHTML=y;
+            }
+            else if(yes.checked ==true){
+                var n =document.getElementById("mycheckbox1").value;
+                return document.getElementById("result").innerHTML= n;
+            }
+            else{
+                 
+            }
+         }
+    </script>
+</body>
+</html>
